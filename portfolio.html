@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Jo's Website </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css_portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<header id ="header" name ="header" class="container-fluid text-center bg-dark-purple">
+   
+    <!-- <ul class="nav navbar-nav navbar-right"> -->
+      <a href="https://www.linkedin.com/in/jonelle-bowen-099953129/" target="_blank"><span class="fa fa-linkedin-square fa-2x"></span> &nbsp;</a></li>
+      <a href="https://github.com/jonellebowen" target="_blank"><span class="fa fa-github fa-2x"></span> &nbsp;</a></li>
+
+</header>
+
+<!-- Navigation Bar -->
+<nav id = "nav_bar" class="navbar navbar navbar-default bg-purple">  
+
+    <div id = "nav_inner" class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <!-- Listing the Tabs -->
+      <ul class="nav navbar-nav navbar-right">
+
+        <li ><a href="jo_home.html"> <strong> About Me </strong></a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <strong> Who am I? </strong> <span class="caret"></span> </a>
+          <ul class="dropdown-menu">
+            <li><a href="#"> Software Engineer </a></li>
+            <li><a href="#"> Woman in Computing </a></li>
+            <li><a href="#"> Jamaican </a></li>
+            <li><a href="#"> Artist </a></li>
+          </ul>
+        </li>
+
+        <li><a href="#"> <strong> Portfolio </strong> </a></li>
+        <li><a href="Resume - Jonelle Bowen.pdf" target="_blank"> <strong> Resume </strong> </em> </a></li>
+        <li><a href="#"> <strong> Contact Me </strong> </a></li>
+
+      </ul>
+    </div>
+</nav>
+
+<!-- Hero Image -->
+<div id="home_image" class="hero-image">
+  <div class="hero-text">
+    <h1> My Portfolio </h1>
+    
+  </div>
+</div>
+
+<div style="height: 20px;" class="bg-dark-purple">
+
+</div>
+
+
+<div id="about_me" class = "container-fluid" style="background-color:#e0c4ff">
+    <!-- Row 1 -->
+    <div class="row row-eq-height">
+        <div class="jumbotron col-sm-6 text-left container-fluid" style="background-color:#ffffff">
+          
+          <h1>
+              <span style="color:#334466"> Current Projects </span>
+          </h1>
+          <br>
+          <h4> 
+          <span style="color:black">
+              <ol>
+                <li> Working on implementing a new design for the official website for the Embassy of Jamaica,
+                      located in Washington D.C. <a href="#">Coming Soon!</a> </li> <br>
+                <li> Working on updating the official website for Rich Moe Enterprises <a href="#"> Coming Soon!</a> </li>
+
+              </ol>
+              
+          </span>          
+          </h4>   
+
+        </div>
+
+        <div class="jumbotron col-sm-6 text-center container-fluid" style="background-color:#e0c4ff">
+          
+            <h1>
+              <span style="color:#334466"> Coding Projects </span>
+            </h1> 
+            <h4> 
+              <span style="color:black">
+                  Coming Soon! <br>
+               
+              </span>          
+              </h4>           
+             
+        </div>
+    </div>
+    
+    <div style="height: 20px;" class="bg-dark-purple">
+
+    </div>
+    <!-- Row 2 -->
+    <div class="row row-eq-height">
+        <div class="jumbotron col-sm-6 text-center container-fluid" style="background-color:#ffffff">
+          
+          <h1>
+              <span style="color:#334466"> Drawings </span>
+          </h1>
+          <br>
+          <h4> 
+          <span style="color:black">
+              Coming Soon! <br>
+           
+          </span>          
+          </h4>   
+
+        </div>
+
+        <div class="jumbotron col-sm-6 text-center container-fluid" style="background-color:#e0c4ff">
+          
+            <h1>
+              <span style="color:#334466"> Software Engineering </span>
+            </h1> 
+            <span style="color:black">
+              Hi! <br>
+              I'm a Computer Science major studying at the University of Maryland, College Park, with a concentration
+              
+            </span>          
+             
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid text-center bg-dark-purple">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+
+    <p> &copy; I made my website! 2017</p>
+</footer>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
