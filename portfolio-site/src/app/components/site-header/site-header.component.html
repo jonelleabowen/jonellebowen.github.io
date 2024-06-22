@@ -1,19 +1,13 @@
-<nav class="navbar navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li *ngFor="let link in links">
-            <a [href]="link.href"> {{link.label}} </a>
-        </li>   
+<nav>
+     
+        <ul class="topnav" id="myTopnav">
+            <li *ngFor="let link of links" class="nav-item__wrapper">
+              <a [href]="link.href" class="nav-item"> {{link.label}} </a>
+            </li>
+              <a class="nav-collapse-icon" 
+                (click)="onCollapseMenuClicked()">
+                  <i class="fa fa-bars"></i>
+              </a>
+            
         </ul>
-      </div>
-    </div>
   </nav>

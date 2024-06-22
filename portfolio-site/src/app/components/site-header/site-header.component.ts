@@ -1,15 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-site-header',
+  selector: 'site-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './site-header.component.html',
   styleUrl: './site-header.component.scss'
 })
 export class SiteHeaderComponent {
 
-  links = [
+  public links = [
     {label:'About Me', href:'#aboutMe'},
     {label:'Education', href:'#education'},
     {label:'Portfolio', href:'#portfolio'},
@@ -17,4 +18,16 @@ export class SiteHeaderComponent {
     {label:'Contact', href:'#contact'}
 
   ] 
+
+  onCollapseMenuClicked() {
+    var x = document.getElementById("myTopnav");
+    if (x) {
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    
+  }
 }
