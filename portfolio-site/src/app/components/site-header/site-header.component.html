@@ -1,0 +1,13 @@
+<nav>
+     
+        <ul class="topnav" id="myTopnav">
+            <li *ngFor="let link of links" class="nav-item__wrapper">
+              <a [href]="link.href" class="nav-item"> {{link.label}} </a>
+            </li>
+              <a class="nav-collapse-icon" 
+                (click)="onCollapseMenuClicked()">
+                  <i class="fa fa-bars"></i>
+              </a>
+            
+        </ul>
+  </nav>
