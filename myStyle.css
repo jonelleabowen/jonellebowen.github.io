@@ -173,6 +173,27 @@
   letter-spacing: 10px;
 }
 
+.construction-banner {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    background-color: #fffcdff3;
+    border: 1px solid #ffbe0df1;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}
+
+.portfolio-container {
+    background-color: #d190f4;
+    color: white;
+}
+
+.warning-svg {
+    width: 16px;
+}
+
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
