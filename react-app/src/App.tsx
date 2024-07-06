@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
-import './App.css';
+import jo_img from './assets/jo.jpg';
+import './App.scss';
 import NavBar from './components/NavBar/NavBar';
 
 function App() {
@@ -33,7 +34,24 @@ function App() {
       </>
     );
   };
-
+  const renderEducation = (): JSX.Element => {
+    return (
+      <>
+        <p>
+          {' '}
+          <strong> School: </strong> University of Maryland, College Park
+        </p>
+        <p>
+          {' '}
+          <strong> Major: </strong> Computer Science
+        </p>
+        <p>
+          {' '}
+          <strong> Currently: </strong> Computer Science Teaching Assistant
+        </p>
+      </>
+    );
+  };
   return (
     <div className="App">
       {<NavBar></NavBar>}
@@ -60,32 +78,20 @@ function App() {
         ></div>
         <h1> About Me </h1>
       </div>
-
       <div className="row">
         <div className="col-sm-8">{renderIntro()}</div>
         <div className="col-sm-4">
           <a href="#demo2" data-toggle="collapse">
             <img
-              src="jo.jpg"
-              className="img-circle person"
+              src={jo_img}
+              className="headshot"
               alt="Jonelle Bowen"
               width="255"
               height="255"
             ></img>
           </a>
           <div id="demo2" className="collapse">
-            <p>
-              {' '}
-              <strong> School: </strong> University of Maryland, College Park
-            </p>
-            <p>
-              {' '}
-              <strong> Major: </strong> Computer Science
-            </p>
-            <p>
-              {' '}
-              <strong> Currently: </strong> Computer Science Teaching Assistant
-            </p>
+            {renderEducation()}
           </div>
         </div>
       </div>
