@@ -1,3 +1,5 @@
+import './NavBar.scss';
+
 interface NavItem {
   name: string;
   path: string;
@@ -15,15 +17,24 @@ function NavBar() {
   const renderNavItems = (): JSX.Element[] => {
     return navItems.map((item) => {
       return (
-        <li key={item.name}>
-          <a href={item.path}>{item.name}</a>
+        <li className="nav-item__wrapper" key={item.name}>
+          <a className="nav-item" href={item.path}>
+            {item.name}
+          </a>
         </li>
       );
     });
   };
+
+  const onCollapseMenuClicked = () => {};
   return (
     <nav>
-      <ul>{renderNavItems()}</ul>
+      <ul className="topnav" id="myTopnav">
+        {renderNavItems()}
+        <a className="nav-collapse-icon" onClick={onCollapseMenuClicked}>
+          <i className="fa fa-bars"></i>
+        </a>
+      </ul>
     </nav>
   );
 }
