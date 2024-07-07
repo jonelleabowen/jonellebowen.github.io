@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import jo_img from './assets/jo.jpg';
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
@@ -34,23 +32,39 @@ function App() {
       </>
     );
   };
-  const renderEducation = (): JSX.Element => {
-    return (
-      <>
-        <p>
-          {' '}
-          <strong> School: </strong> University of Maryland, College Park
-        </p>
-        <p>
-          {' '}
-          <strong> Major: </strong> Computer Science
-        </p>
-        <p>
-          {' '}
-          <strong> Currently: </strong> Computer Science Teaching Assistant
-        </p>
-      </>
-    );
+  const renderEducation = (): JSX.Element[] => {
+    const eduEntry = [
+      {
+        school: 'University of Maryland, College Park',
+        major: 'Computer Science',
+        degree: 'Computer Science Teaching Assistant',
+      },
+      {
+        school: 'Montgomery College, Rockville',
+        major: 'Computer Science and Technologies',
+        degree: 'Associate Degree',
+      },
+      {
+        school: 'Immaculate Conception High School',
+        major: 'High School Diploma',
+        degree: 'Class of 2013',
+      },
+    ];
+    return eduEntry.map((entry) => {
+      return (
+        <div className="container right">
+          <div>
+            <h3> {entry.school} </h3>
+          </div>
+          <div>
+            <strong> Major: </strong> {entry.major}
+          </div>
+          <div>
+            <strong> Currently: </strong> {entry.degree}
+          </div>
+        </div>
+      );
+    });
   };
   return (
     <div className="App">
@@ -81,9 +95,20 @@ function App() {
               ></img>
             </a>
             <div id="demo2" className="collapse">
-              {renderEducation()}
+              {/* {renderEducation()} */}
             </div>
           </div>
+        </div>
+      </div>
+      {/* purple spacer */}
+      <div className="bgimg-3">
+        <div className="caption"></div>
+      </div>
+      <div id="education">
+        <div className="container left">
+          <h3 className="text-left"> Education </h3>
+          <hr></hr>
+          {renderEducation()}
         </div>
       </div>
     </div>
