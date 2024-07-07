@@ -58,40 +58,31 @@ function App() {
       {/* header/ jumbotron section */}
       <div className="bgimg-1" style={{ color: '#ffffff' }}>
         <div
-          className="jumbotron text-center"
-          style={{ background: 'transparent' }}
+          className="jumbotron text-center transparent"
+          style={{ height: '300px' }}
         >
-          <h1> </h1>
-        </div>
-        <div
-          className="jumbotron text-center"
-          style={{ background: 'transparent !important' }}
-        >
-          <h1> Welcome to my Page </h1>
+          <h1> Welcome </h1>
         </div>
       </div>
       {/* about me section */}
-      <div id="aboutMe" className="container ">
-        <div
-          className="jumbotron text-center"
-          style={{ background: 'transparent !important' }}
-        ></div>
-        <h1> About Me </h1>
-      </div>
-      <div className="row">
-        <div className="col-sm-8">{renderIntro()}</div>
-        <div className="col-sm-4">
-          <a href="#demo2" data-toggle="collapse">
-            <img
-              src={jo_img}
-              className="headshot"
-              alt="Jonelle Bowen"
-              width="255"
-              height="255"
-            ></img>
-          </a>
-          <div id="demo2" className="collapse">
-            {renderEducation()}
+      <div id="aboutMe" className="container">
+        {/* <div className="jumbotron text-center transparent"></div> */}
+        {/* <h1> About Me </h1> */}
+        <div className="row">
+          <div className="col-sm-8">{renderIntro()}</div>
+          <div className="col-sm-4">
+            <a href="#demo2" data-toggle="collapse">
+              <img
+                src={jo_img}
+                className="headshot"
+                alt="Jonelle Bowen"
+                width="255"
+                height="255"
+              ></img>
+            </a>
+            <div id="demo2" className="collapse">
+              {renderEducation()}
+            </div>
           </div>
         </div>
       </div>

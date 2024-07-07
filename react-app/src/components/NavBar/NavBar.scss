@@ -1,59 +1,62 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
-
 .nav-item__wrapper {
-    display: block;
+  display: block;
 }
 
 .topnav {
-    // display: flex;
-    background-color: #333;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
+  // display: flex;\
+  font-family: Montserrat, sans-serif;
+  background-color: #333;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+
+  letter-spacing: 4px;
+  opacity: 0.9;
 }
 
 .nav-item {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 12px;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 11px;
 
-    &:active {
-        @extend .nav-item__active;
-    }
+  &:active {
+    @extend .nav-item__active;
+  }
 }
 
 .nav-item__active {
-    background-color: #282e2c;
-    color: white;
+  background-color: #282e2c;
+  color: white;
 }
 
 /* Change the color of links on hover */
 .nav-item a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
 .nav-collapse-icon {
-    display: none;
-    align-self: center;
+  display: none;
+  align-self: center;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.nav-collapse-icon) */
 @media screen and (max-width: 300px) {
-    .topnav .nav-item__wrapper:not(:first-child) {
-        display: none;
-    }
+  .topnav .nav-item__wrapper:not(:first-child) {
+    display: none;
+  }
 
-    .nav-collapse-icon {
-        float: right;
-        display: block;
-    }
+  .nav-collapse-icon {
+    float: right;
+    display: block;
+  }
 }
 
 /* The "responsive" class is added to the topnav with JavaScript 
@@ -61,22 +64,22 @@
   look good on small screens (display the links vertically instead 
   of horizontally) */
 @media screen and (max-width: 600px) {
-    .topnav.responsive {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
+  .topnav.responsive {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .topnav.responsive .nav-collapse-icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-        float: none;
-        display: block;
-        text-align: left;
-    }
+  .topnav.responsive .nav-collapse-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: none;
+    display: block;
+    text-align: left;
+  }
 
-    .topnav.responsive .nav-item__wrapper {
-        display: block;
-    }
+  .topnav.responsive .nav-item__wrapper {
+    display: block;
+  }
 }

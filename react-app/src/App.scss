@@ -62,6 +62,10 @@
     color: black;
 }
 
+.container {
+  padding: 20px 30px;
+}
+
 .portfolio-container {
     background-color: #d190f4;
     color: white;
@@ -69,6 +73,10 @@
 
 .warning-svg {
     width: 16px;
+}
+
+.transparent {
+    background: transparent !important;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
