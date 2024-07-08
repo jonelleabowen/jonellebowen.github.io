@@ -9,27 +9,28 @@
 }
 
 /* ======================================= Stuff for Parallax Scrolling =============================== */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
   position: relative;
   opacity: 0.65;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 .bgimg-1 {
-  background-image: url("./assets/piano.jpg");
+  background-image: url('./assets/piano.jpg');
   min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("./assets/forest.jpg");
+  background-image: url('./assets/forest.jpg');
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("./assets/purple2.jpg");
+  background-image: url('./assets/purple2.jpg');
   min-height: 400px;
 }
 
@@ -51,15 +52,15 @@
 }
 
 .construction-banner {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 4px;
-    background-color: #fffcdff3;
-    border: 1px solid #ffbe0df1;
-    border-radius: 10px;
-    padding: 10px;
-    color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background-color: #fffcdff3;
+  border: 1px solid #ffbe0df1;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
 }
 
 .container {
@@ -67,21 +68,32 @@
 }
 
 .portfolio-container {
-    background-color: #d190f4;
-    color: white;
+  background-color: #d190f4;
+  color: white;
 }
 
 .warning-svg {
-    width: 16px;
+  width: 16px;
 }
 
 .transparent {
-    background: transparent !important;
+  background: transparent !important;
+}
+
+.portfolio-section {
+  background-color: #d190f4;
+  color: white;
+
+  a {
+    color: white;
+  }
 }
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-      background-attachment: scroll;
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
   }
 }

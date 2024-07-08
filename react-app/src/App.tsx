@@ -1,6 +1,7 @@
 import jo_img from './assets/jo.jpg';
-import './App.scss';
 import NavBar from './components/NavBar/NavBar';
+import { eduEntry, tools } from './constants';
+import './App.scss';
 
 function App() {
   const renderIntro = (): JSX.Element => {
@@ -33,26 +34,9 @@ function App() {
     );
   };
   const renderEducation = (): JSX.Element[] => {
-    const eduEntry = [
-      {
-        school: 'University of Maryland, College Park',
-        major: 'Computer Science',
-        degree: 'Computer Science Teaching Assistant',
-      },
-      {
-        school: 'Montgomery College, Rockville',
-        major: 'Computer Science and Technologies',
-        degree: 'Associate Degree',
-      },
-      {
-        school: 'Immaculate Conception High School',
-        major: 'High School Diploma',
-        degree: 'Class of 2013',
-      },
-    ];
     return eduEntry.map((entry) => {
       return (
-        <div className="container right">
+        <div>
           <div>
             <h3> {entry.school} </h3>
           </div>
@@ -65,6 +49,20 @@ function App() {
         </div>
       );
     });
+  };
+
+  const renderTools = (): JSX.Element => {
+    const toolList = tools.map((tool) => {
+      return (
+        <li key={tool.name}>
+          {/* {tool.icon} */}
+          <a href={tool.link} target="_blank">
+            {tool.name}
+          </a>
+        </li>
+      );
+    });
+    return <ul>{toolList}</ul>;
   };
   return (
     <div className="App">
@@ -80,7 +78,6 @@ function App() {
       </div>
       {/* about me section */}
       <div id="aboutMe" className="container">
-        {/* <div className="jumbotron text-center transparent"></div> */}
         {/* <h1> About Me </h1> */}
         <div className="row">
           <div className="col-sm-8">{renderIntro()}</div>
@@ -109,6 +106,14 @@ function App() {
           <h3 className="text-left"> Education </h3>
           <hr></hr>
           {renderEducation()}
+        </div>
+      </div>
+      {/* portfolio section */}
+      <div id="portfolio" className="portfolio-section">
+        <div className="container">
+          <h3 className="text-left"> Tech Stack </h3>
+          <hr></hr>
+          <div>{renderTools()}</div>
         </div>
       </div>
     </div>
