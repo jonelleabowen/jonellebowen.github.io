@@ -1,9 +1,19 @@
 interface Tool {
     name: string;
     icon: string;
-    link: string;
+    link?: string;
 }
 export const tools: Tool[] = [
+    {
+        name: 'React',
+        icon: 'react',
+        link: 'https://reactjs.org/learn'
+    },
+    {
+        name: 'Angular',
+        icon: 'angular',
+        link: 'https://angular.io/'
+    },
     {
         name: 'TypeScript',
         icon: 'typescript',
@@ -19,20 +29,26 @@ export const tools: Tool[] = [
         icon: 'nodejs',
         link: 'https://nodejs.org/'
     },
-    {
-        name: 'React',
-        icon: 'react',
-        link: 'https://reactjs.org/learn'
-    },
-    {
-        name: 'Angular',
-        icon: 'angular',
-        link: 'https://angular.io/'
-    },
+
     {
         name: 'Git',
         icon: 'git',
         link: 'https://git-scm.com/'
+    },
+    {
+        name: 'StencilJS',
+        icon: 'stenciljs',
+        // link: 'https://git-scm.com/'
+    },
+    {
+        name: 'Cypress',
+        icon: 'cypress',
+        // link: 'https://git-scm.com/'
+    },
+    {
+        name: 'single-spa',
+        icon: 'single-spa',
+        // link: 'https://git-scm.com/'
     },
 ]
 
