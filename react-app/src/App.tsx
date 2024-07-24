@@ -3,18 +3,12 @@ import NavBar from './components/NavBar/NavBar';
 import { eduEntry, tools } from './constants';
 import Footer from './components/Footer/Footer';
 import './App.scss';
-import { useRef } from 'react';
 import { useCountries } from './hooks/useCountries';
 
 export default function App() {
-  const refEducation = useRef(null);
-  const refIntro = useRef(null);
-  const refContact = useRef(null);
-  const refPortfolio = useRef(null);
-
   const renderIntro = (): JSX.Element => {
     return (
-      <div ref={refIntro}>
+      <>
         <p>
           {' '}
           Hi! <br />
@@ -32,13 +26,13 @@ export default function App() {
           travel, and I enjoy exploring new places. I'm a lover of learning, and
           I enjoy reading. I'm a lover of life, and I enjoy living.
         </p>
-      </div>
+      </>
     );
   };
   const renderEducation = (): JSX.Element[] => {
     return eduEntry.map((entry) => {
       return (
-        <div ref={refEducation} key={entry.school}>
+        <div key={entry.school}>
           <div>
             <h3> {entry.school} </h3>
           </div>
@@ -65,22 +59,6 @@ export default function App() {
       );
     });
     return <ul>{toolList}</ul>;
-  };
-
-  const renderCountries = (): JSX.Element => {
-    const countries: any[] = useCountries();
-    return (
-      <div>
-        {countries.map((country) => {
-          return (
-            <div key={country.name.common}>
-              <span>{country.name.common}</span>
-              <span>{country.flag} </span>
-            </div>
-          );
-        })}
-      </div>
-    );
   };
 
   return (
@@ -128,14 +106,13 @@ export default function App() {
         </div>
       </div>
       {/* portfolio section */}
-      <div id="portfolio" className="portfolio-section" ref={refPortfolio}>
+      <div id="portfolio" className="portfolio-section">
         <div className="container">
           <h3 className="text-left"> Tech Stack </h3>
           <hr></hr>
           <div>{renderTools()}</div>
         </div>
       </div>
-      <div>{renderCountries()}</div>
       {/* Footer */}
       <Footer></Footer>
     </div>

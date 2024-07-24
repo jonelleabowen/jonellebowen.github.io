@@ -1,5 +1,3 @@
-import { EventHandler } from "react";
-
 export interface NavItem {
     name: string;
     path: string;

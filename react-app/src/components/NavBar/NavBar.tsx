@@ -1,4 +1,4 @@
-import { NavBarInterface, NavItem, NavItemMap } from './NavBar.interface';
+import { NavItem } from './NavBar.interface';
 import './NavBar.scss';
 
 function NavBar() {
