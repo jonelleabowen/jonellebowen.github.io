@@ -6,16 +6,14 @@ function NavBar() {
     { name: 'About Me', path: 'aboutMe' },
     { name: 'Education', path: 'education' },
     { name: 'Portfolio', path: 'portfolio' },
-    { name: 'Resume', path: '/resume' },
+    { name: 'Resume', path: 'Resume 2024.pdf' },
     { name: 'Contact', path: 'contact' },
   ];
 
   const scrollToSection = (event, sectionId: string) => {
     event.preventDefault();
-    console.log(sectionId);
     const section = document.getElementById(sectionId);
     if (section) {
-      console.log('scroll to', sectionId);
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -24,13 +22,20 @@ function NavBar() {
     return navItems.map((item) => {
       return (
         <li className="nav-item__wrapper" key={item.name}>
-          <a
-            className="nav-item"
-            href={item.path}
-            onClick={(event) => scrollToSection(event, item.path)}
-          >
-            {item.name}
-          </a>
+          {!(item.name === 'resume') && (
+            <a
+              className="nav-item"
+              href={item.path}
+              onClick={(event) => scrollToSection(event, item.path)}
+            >
+              {item.name}
+            </a>
+          )}
+          {item.name === 'resume' && (
+            <a className="nav-item" href={item.path} target="_blank">
+              {item.name}
+            </a>
+          )}
         </li>
       );
     });

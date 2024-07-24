@@ -3,7 +3,6 @@ import NavBar from './components/NavBar/NavBar';
 import { eduEntry, tools } from './constants';
 import Footer from './components/Footer/Footer';
 import './App.scss';
-import { useCountries } from './hooks/useCountries';
 
 export default function App() {
   const renderIntro = (): JSX.Element => {
