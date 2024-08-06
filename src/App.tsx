@@ -2,9 +2,18 @@ import jo_img from './assets/jo.jpg';
 import NavBar from './components/NavBar/NavBar';
 import { eduEntry, tools } from './constants';
 import Footer from './components/Footer/Footer';
+import { NavItem } from './components/NavBar/NavBar.interface';
 import './App.scss';
 
 export default function App() {
+  const navItems: NavItem[] = [
+    { name: 'About Me', path: 'aboutMe' },
+    { name: 'Education', path: 'education' },
+    { name: 'Portfolio', path: 'portfolio' },
+    { name: 'Resume', path: 'Resume 2024.pdf' },
+    { name: 'Contact', path: 'contact' },
+  ];
+
   const renderIntro = (): JSX.Element => {
     return (
       <>
@@ -60,9 +69,22 @@ export default function App() {
     return <ul>{toolList}</ul>;
   };
 
+  const navItemClickedHandler = (event, sectionId: string) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="App">
-      {<NavBar></NavBar>}
+      {
+        <NavBar
+          navItems={navItems}
+          onNavItemClicked={navItemClickedHandler}
+        ></NavBar>
+      }
       {/* header/ jumbotron section */}
       <div className="bgimg-1" style={{ color: '#ffffff' }}>
         <div

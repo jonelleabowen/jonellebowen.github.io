@@ -1,32 +1,22 @@
 import { NavItem } from './NavBar.interface';
 import './NavBar.scss';
 
-function NavBar() {
-  const navItems: NavItem[] = [
-    { name: 'About Me', path: 'aboutMe' },
-    { name: 'Education', path: 'education' },
-    { name: 'Portfolio', path: 'portfolio' },
-    { name: 'Resume', path: 'Resume 2024.pdf' },
-    { name: 'Contact', path: 'contact' },
-  ];
-
-  const scrollToSection = (event, sectionId: string) => {
-    event.preventDefault();
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+function NavBar({ navItems, onNavItemClicked }) {
+  function handleNavItemClicked(event) {
+    const href = event.target.href;
+    const url = new URL(event.target.href);
+    const sectionId = url.pathname.split('/')[1];
+    onNavItemClicked(event, sectionId);
+  }
   const renderNavItems = (): JSX.Element[] => {
-    return navItems.map((item) => {
+    return navItems.map((item: NavItem) => {
       return (
         <li className="nav-item__wrapper" key={item.name}>
           {!(item.name === 'resume') && (
             <a
               className="nav-item"
               href={item.path}
-              onClick={(event) => scrollToSection(event, item.path)}
+              onClick={handleNavItemClicked}
             >
               {item.name}
             </a>
