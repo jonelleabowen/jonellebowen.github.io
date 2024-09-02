@@ -69,7 +69,7 @@ export default function App() {
     return <ul>{toolList}</ul>;
   };
 
-  const navItemClickedHandler = (event, sectionId: string) => {
+  const navItemClickedHandler = (event: MouseEvent, sectionId: string) => {
     event.preventDefault();
     const section = document.getElementById(sectionId);
     if (section) {

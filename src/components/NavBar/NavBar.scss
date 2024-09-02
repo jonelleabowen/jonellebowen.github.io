@@ -5,9 +5,8 @@
 }
 
 .topnav {
-  // display: flex;\
   font-family: Montserrat, sans-serif;
-  background-color: #333;
+  background-color: white;
   overflow: hidden;
   padding: 0;
   margin: 0;
@@ -19,27 +18,29 @@
 .nav-item {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #7c00de;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: bold;
 
   &:active {
     @extend .nav-item__active;
   }
+
+  a:hover {
+    color: #4d0286;
+    text-decoration: none;
+  }
 }
 
 .nav-item__active {
-  background-color: #282e2c;
-  color: white;
+  color: #4d0286;
+  text-decoration: none;
 }
 
 /* Change the color of links on hover */
-.nav-item a:hover {
-  background-color: #ddd;
-  color: black;
-}
 
 /* Hide the link that should open and close the topnav on small screens */
 .nav-collapse-icon {

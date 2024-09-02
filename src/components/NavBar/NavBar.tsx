@@ -1,13 +1,21 @@
 import { NavItem } from './NavBar.interface';
 import './NavBar.scss';
 
-function NavBar({ navItems, onNavItemClicked }) {
+interface NavBarProps {
+  navItems: NavItem[];
+  onNavItemClicked: (event: MouseEvent, sectionId: string) => void;
+}
+
+function NavBar(props: NavBarProps) {
+  const { navItems, onNavItemClicked } = props;
+
   function handleNavItemClicked(event) {
     const href = event.target.href;
     const url = new URL(event.target.href);
     const sectionId = url.pathname.split('/')[1];
     onNavItemClicked(event, sectionId);
   }
+
   const renderNavItems = (): JSX.Element[] => {
     return navItems.map((item: NavItem) => {
       return (
