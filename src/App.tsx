@@ -1,4 +1,4 @@
-import jo_img from './assets/jo.jpg';
+import jo_img from './assets/jb.jpg';
 import NavBar from './components/NavBar/NavBar';
 import { eduEntry, tools } from './constants';
 import Footer from './components/Footer/Footer';
