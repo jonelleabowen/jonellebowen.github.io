@@ -18,21 +18,34 @@ export default function App() {
     return (
       <>
         <p>
-          {' '}
           Hi! <br />
           I'm Jonelle Bowen, a software engineer with a passion for front-end
-          development. Originally from Jamaica, I'm currrently based in the
-          vibrant city of London. My journey in tech began out of curiosity and
-          quickly grew into a passion for web development, particularly in the
-          frontend realm where design meets code. Over the years, I've had the
-          privilege of working with talented engineers and designers to build
-          modern user experiences that are a joy to use.
+          development. My first introduction to programming happened while I was
+          in high school back in <span>Kingston, Jamaica</span>. With this prior
+          exposure, I was confident enough to study Computer Science for my
+          undergrad when I moved to Maryland, USA for university.
         </p>
         <p>
-          I'm a self-taught artist, and I enjoy drawing in my free time. I also
-          enjoy playing the piano, ballroom dancing, and cooking. I'm a lover of
-          travel, and I enjoy exploring new places. I'm a lover of learning, and
-          I enjoy reading. I'm a lover of life, and I enjoy living.
+          There, I studied Java and Object-oriented programming. After earning
+          my CS degree, I moved to
+          <span>New York</span> to begin my career in software engineering,
+          where I was quickly thrust into the world of front-end development.
+          This space gave me the opportunity to combine my technical skills with
+          my creative side. I now have the privilege of working on a User
+          Experience-centered team where we endeavour to create scalable and
+          maintainable experiences that are a joy to use.
+        </p>
+        <p>
+          After 3 years in New York, I moved to <span>London</span>, where I'm
+          currrently based and continue to work as a front-end engineer in the
+          asset management industry.
+        </p>
+        <p>
+          Outside of work, I have an array of hobbies I try to juggle. I enjoy
+          drawing in my free time, and my art is heavily influenced by the anime
+          I grew up with and still continue to watch. I also enjoy playing the
+          piano, ballroom dancing, reading and cooking. I also love to play
+          video games, one of my childhood staples.
         </p>
       </>
     );
