@@ -53,15 +53,18 @@ export default function App() {
   const renderEducation = (): JSX.Element[] => {
     return eduEntry.map((entry) => {
       return (
-        <div key={entry.school}>
+        <div key={entry.school} className="education-container">
           <div>
-            <h3> {entry.school} </h3>
+            <img src={entry.logo} style={{ width: '60px' }} />
           </div>
-          <div>
-            <strong> Major: </strong> {entry.major}
-          </div>
-          <div>
-            <strong> Currently: </strong> {entry.degree}
+          <div className="education-details-section">
+            <span style={{ fontWeight: '900' }}> {entry.school} </span>
+            <div>
+              <span>
+                {entry.degree} | {entry.major}
+              </span>
+            </div>
+            <span>{entry.tenure}</span>
           </div>
         </div>
       );
