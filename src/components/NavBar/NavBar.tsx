@@ -20,7 +20,7 @@ function NavBar(props: NavBarProps) {
     return navItems.map((item: NavItem) => {
       return (
         <li className="nav-item__wrapper" key={item.name}>
-          {!(item.name === 'resume') && (
+          {!(item.name === 'Resume') && (
             <a
               className="nav-item"
               href={item.path}
@@ -29,7 +29,7 @@ function NavBar(props: NavBarProps) {
               {item.name}
             </a>
           )}
-          {item.name === 'resume' && (
+          {item.name === 'Resume' && (
             <a className="nav-item" href={item.path} target="_blank">
               {item.name}
             </a>
