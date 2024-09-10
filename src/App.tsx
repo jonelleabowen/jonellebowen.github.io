@@ -150,7 +150,6 @@ export default function App() {
           <div>{renderTools()}</div>
         </div>
       </div>
-      {/* Footer */}
       <Footer></Footer>
     </div>
   );
