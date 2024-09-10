@@ -64,7 +64,9 @@ export default function App() {
                 {entry.degree} | {entry.major}
               </span>
             </div>
-            <span>{entry.tenure}</span>
+            <div className="container-row-flex">
+              <span>{entry.tenure} | </span> <span>{entry.location}</span>
+            </div>
           </div>
         </div>
       );

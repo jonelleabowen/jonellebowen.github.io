@@ -82,7 +82,8 @@ export const eduEntry: Education[] = [
         degree: 'Credential of Readiness',
         logo: hbs_logo,
         alt: 'Harvard logo',
-        tenure: '2018'
+        tenure: '2018',
+        location: 'Online'
     },
     {
         school: 'Montgomery College, Rockville',
@@ -95,6 +96,7 @@ export const eduEntry: Education[] = [
     },
     {
         school: 'Immaculate Conception High School',
+        major: 'Caribbean Secondary Examination Certificate (CSEC)',
         degree: 'Diploma',
         logo: ichs_logo,
         src: 'Immaculate logo',

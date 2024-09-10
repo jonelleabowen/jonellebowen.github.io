@@ -100,6 +100,11 @@
   margin-left: 8px;
 }
 
+.container-row-flex {
+  display: flex;
+  gap: 4px;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
   .bgimg-1,
