@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import { eduEntry, tools } from './constants';
 import Footer from './components/Footer/Footer';
 import { NavItem } from './components/NavBar/NavBar.interface';
+import resume from './assets/Resume_2024.pdf';
 import './App.scss';
 
 export default function App() {
@@ -10,7 +11,7 @@ export default function App() {
     { name: 'About Me', path: 'aboutMe' },
     { name: 'Education', path: 'education' },
     { name: 'Portfolio', path: 'portfolio' },
-    { name: 'Resume', path: 'Resume 2024.pdf' },
+    { name: 'Resume', path: resume },
     { name: 'Contact', path: 'contact' },
   ];
 
