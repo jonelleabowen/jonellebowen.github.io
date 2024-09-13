@@ -5,6 +5,8 @@
 }
 
 .topnav {
+  display: flex;
+
   font-family: Montserrat, sans-serif;
   background-color: white;
   overflow: hidden;
@@ -24,6 +26,7 @@
   text-decoration: none;
   font-size: 12px;
   font-weight: bold;
+  text-wrap: nowrap;
 
   &:active {
     @extend .nav-item__active;
@@ -44,6 +47,11 @@
   align-self: center;
 }
 
+.ja-flag-container {
+  display: flex;
+  height: inherit;
+}
+
 @media screen and (max-width: 500px) {
   .topnav .nav-item__wrapper:not(:first-child) {
     display: none;
@@ -54,7 +62,6 @@
     display: block;
     border: 1px solid #800080;
     background-color: #ffffff;
-    margin-top: 10px;
     margin-right: 24px;
     border-radius: 4px;
   }

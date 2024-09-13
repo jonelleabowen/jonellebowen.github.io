@@ -1,5 +1,6 @@
 import { NavItem } from './NavBar.interface';
 import { useRef } from 'react';
+import { jaFlagColors } from '../../constants';
 import './NavBar.scss';
 
 interface NavBarProps {
@@ -52,7 +53,16 @@ function NavBar(props: NavBarProps) {
   };
 
   return (
-    <nav>
+    <nav style={{ display: 'flex' }}>
+      <div className="ja-flag-container">
+        {jaFlagColors.map((color) => {
+          return (
+            <div
+              style={{ backgroundColor: color, height: '100%', width: '10px' }}
+            ></div>
+          );
+        })}
+      </div>
       <ul className="topnav" id="myTopnav" ref={navRef}>
         {renderNavItems()}
         <button className="nav-collapse-button" onClick={onCollapseMenuClicked}>

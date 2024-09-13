@@ -104,3 +104,5 @@ export const eduEntry: Education[] = [
         tenure: '2013'
     },
 ];
+
+export const jaFlagColors = [ 'black', 'green', 'gold' ];
