@@ -1,4 +1,5 @@
 import { NavItem } from './NavBar.interface';
+import { useRef } from 'react';
 import './NavBar.scss';
 
 interface NavBarProps {
@@ -6,8 +7,11 @@ interface NavBarProps {
   onNavItemClicked: (event: MouseEvent, sectionId: string) => void;
 }
 
+const RESPONSIVE_CLASS = 'responsive';
+
 function NavBar(props: NavBarProps) {
   const { navItems, onNavItemClicked } = props;
+  const navRef = useRef<HTMLUListElement | null>(null);
 
   function handleNavItemClicked(event) {
     const href = event.target.href;
@@ -39,14 +43,21 @@ function NavBar(props: NavBarProps) {
     });
   };
 
-  const onCollapseMenuClicked = () => {};
+  const onCollapseMenuClicked = () => {
+    if (navRef && navRef.current?.classList.contains(RESPONSIVE_CLASS)) {
+      navRef.current.classList.remove(RESPONSIVE_CLASS);
+    } else {
+      navRef?.current?.classList.add(RESPONSIVE_CLASS);
+    }
+  };
+
   return (
     <nav>
-      <ul className="topnav" id="myTopnav">
+      <ul className="topnav" id="myTopnav" ref={navRef}>
         {renderNavItems()}
-        <a className="nav-collapse-icon" onClick={onCollapseMenuClicked}>
+        <button className="nav-collapse-button" onClick={onCollapseMenuClicked}>
           <i className="fa fa-bars"></i>
-        </a>
+        </button>
       </ul>
     </nav>
   );

@@ -39,24 +39,24 @@
   color: #4d0286;
   text-decoration: none;
 }
-
-/* Change the color of links on hover */
-
-/* Hide the link that should open and close the topnav on small screens */
-.nav-collapse-icon {
+.nav-collapse-button {
   display: none;
   align-self: center;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.nav-collapse-icon) */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   .topnav .nav-item__wrapper:not(:first-child) {
     display: none;
   }
 
-  .nav-collapse-icon {
+  .nav-collapse-button {
     float: right;
     display: block;
+    border: 1px solid #800080;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-right: 24px;
+    border-radius: 4px;
   }
 }
 
@@ -64,14 +64,14 @@
   when the user clicks on the collapse-icon. This class makes the topnav 
   look good on small screens (display the links vertically instead 
   of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .topnav.responsive {
     position: relative;
     display: flex;
     flex-direction: column;
   }
 
-  .topnav.responsive .nav-collapse-icon {
+  .topnav.responsive .nav-collapse-button {
     position: absolute;
     right: 0;
     top: 0;
