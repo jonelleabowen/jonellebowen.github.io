@@ -2,10 +2,20 @@ import ichs_logo from './assets/ichs_logo.png';
 import mc_logo from './assets/mc_logo.png';
 import umd_logo from './assets/umd_logo.png';
 import hbs_logo from './assets/hbs_logo.png';
+import angular_svg from './assets/angular.svg';
+import react_svg from './assets/react.svg';
+import scss_svg from './assets/scss.svg';
+import typescript_svg from './assets/typescript.svg';
+// import javascript_svg from './assets/javascript.svg';
+// import nodejs_svg from './assets/nodejs.svg';
+// import git_svg from './assets/git.svg';
+import stenciljs_svg from './assets/stencil.svg';
+import cypress_svg from './assets/cypress.svg';
+// import singlespa_svg from './assets/singlespa.svg';
 
 interface Tool {
     name: string;
-    icon: string;
+    icon?: string;
     link?: string;
 }
 
@@ -16,52 +26,57 @@ interface Education {
     major?: string;
     degree?: string;
     location?: string;
+    tenure?: string;
 }
 export const tools: Tool[] = [
     {
         name: 'React',
-        icon: 'react',
+        icon: react_svg,
         link: 'https://reactjs.org/learn'
     },
     {
         name: 'Angular',
-        icon: 'angular',
+        icon: angular_svg,
+        link: 'https://angular.io/'
+    },
+    {
+        name: 'SCSS',
+        icon: scss_svg,
         link: 'https://angular.io/'
     },
     {
         name: 'TypeScript',
-        icon: 'typescript',
+        icon: typescript_svg,
         link: 'https://www.typescriptlang.org/'
     },
     {
         name: 'JavaScript',
-        icon: 'javascript',
+        // icon: javascript_svg,
         link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     },
     {
         name: 'Node.js',
-        icon: 'nodejs',
+        // icon: nodejs_svg,
         link: 'https://nodejs.org/'
     },
-
     {
         name: 'Git',
-        icon: 'git',
+        // icon: git_svg,
         link: 'https://git-scm.com/'
     },
     {
         name: 'StencilJS',
-        icon: 'stenciljs',
-        // link: 'https://git-scm.com/'
+        icon: stenciljs_svg,
+        link: 'https://git-scm.com/'
     },
     {
         name: 'Cypress',
-        icon: 'cypress',
+        icon: cypress_svg,
         // link: 'https://git-scm.com/'
     },
     {
         name: 'single-spa',
-        icon: 'single-spa',
+        // icon: singlespa_svg,
         // link: 'https://git-scm.com/'
     },
 ]
@@ -99,7 +114,6 @@ export const eduEntry: Education[] = [
         major: 'Caribbean Secondary Examination Certificate (CSEC)',
         degree: 'Diploma',
         logo: ichs_logo,
-        src: 'Immaculate logo',
         location: "Kingston, Jamaica",
         tenure: '2013'
     },

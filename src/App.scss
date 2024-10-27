@@ -80,7 +80,7 @@
 }
 
 .portfolio-section {
-  background-color: #d190f4;
+  background-color: #948fffed;
   color: white;
 
   a {
@@ -103,6 +103,10 @@
 .container-row-flex {
   display: flex;
   gap: 4px;
+}
+
+.skill_logo {
+  width: 38px;
 }
 
 /* Turn off parallax scrolling for tablets and phones */

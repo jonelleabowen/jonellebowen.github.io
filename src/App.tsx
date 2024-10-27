@@ -78,10 +78,10 @@ export default function App() {
     const toolList = tools.map((tool) => {
       return (
         <li key={tool.name}>
-          {/* {tool.icon} */}
           <a href={tool.link} target="_blank">
             {tool.name}
           </a>
+          <img className="skill_logo" src={tool.icon}></img>
         </li>
       );
     });
