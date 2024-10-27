@@ -1,5 +1,5 @@
 import { NavItem } from './NavBar.interface';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { jaFlagColors } from '../../constants';
 import './NavBar.scss';
 
@@ -13,6 +13,7 @@ const RESPONSIVE_CLASS = 'responsive';
 function NavBar(props: NavBarProps) {
   const { navItems, onNavItemClicked } = props;
   const navRef = useRef<HTMLUListElement | null>(null);
+  const [navResonsive, setNavResonsive] = useState('');
 
   function handleNavItemClicked(event) {
     const href = event.target.href;
@@ -46,9 +47,9 @@ function NavBar(props: NavBarProps) {
 
   const onCollapseMenuClicked = () => {
     if (navRef && navRef.current?.classList.contains(RESPONSIVE_CLASS)) {
-      navRef.current.classList.remove(RESPONSIVE_CLASS);
+      setNavResonsive('');
     } else {
-      navRef?.current?.classList.add(RESPONSIVE_CLASS);
+      setNavResonsive(RESPONSIVE_CLASS);
     }
   };
 
@@ -63,7 +64,7 @@ function NavBar(props: NavBarProps) {
           );
         })}
       </div>
-      <ul className="topnav" id="myTopnav" ref={navRef}>
+      <ul className={`topnav ${navResonsive}`} id="myTopnav" ref={navRef}>
         {renderNavItems()}
         <button className="nav-collapse-button" onClick={onCollapseMenuClicked}>
           <i className="fa fa-bars"></i>

@@ -128,9 +128,6 @@ export default function App() {
                 height="255"
               ></img>
             </a>
-            <div id="demo2" className="collapse">
-              {/* {renderEducation()} */}
-            </div>
           </div>
         </div>
       </div>
@@ -148,7 +145,7 @@ export default function App() {
       {/* portfolio section */}
       <div id="portfolio" className="portfolio-section">
         <div className="container">
-          <h3 className="text-left"> Tech Stack </h3>
+          <h3 className="text-left"> Skills </h3>
           <hr></hr>
           <div>{renderTools()}</div>
         </div>
