@@ -6,12 +6,11 @@ import angular_svg from './assets/angular.svg';
 import react_svg from './assets/react.svg';
 import scss_svg from './assets/scss.svg';
 import typescript_svg from './assets/typescript.svg';
-// import javascript_svg from './assets/javascript.svg';
-// import nodejs_svg from './assets/nodejs.svg';
-// import git_svg from './assets/git.svg';
+import javascript_svg from './assets/javascript.svg';
+import nodejs_svg from './assets/nodejs.svg';
+import git_svg from './assets/git.svg';
 import stenciljs_svg from './assets/stencil.svg';
 import cypress_svg from './assets/cypress.svg';
-// import singlespa_svg from './assets/singlespa.svg';
 
 interface Tool {
     name: string;
@@ -40,9 +39,14 @@ export const tools: Tool[] = [
         link: 'https://angular.io/'
     },
     {
+        name: 'StencilJS',
+        icon: stenciljs_svg,
+        link: 'https://stenciljs.com/'
+    },
+    {
         name: 'SCSS',
         icon: scss_svg,
-        link: 'https://angular.io/'
+        link: 'https://sass-lang.com/'
     },
     {
         name: 'TypeScript',
@@ -51,33 +55,28 @@ export const tools: Tool[] = [
     },
     {
         name: 'JavaScript',
-        // icon: javascript_svg,
+        icon: javascript_svg,
         link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     },
     {
         name: 'Node.js',
-        // icon: nodejs_svg,
+        icon: nodejs_svg,
         link: 'https://nodejs.org/'
     },
     {
         name: 'Git',
-        // icon: git_svg,
+        icon: git_svg,
         link: 'https://git-scm.com/'
     },
-    {
-        name: 'StencilJS',
-        icon: stenciljs_svg,
-        link: 'https://git-scm.com/'
-    },
+
     {
         name: 'Cypress',
         icon: cypress_svg,
-        // link: 'https://git-scm.com/'
+        link: 'https://www.cypress.io/'
     },
     {
         name: 'single-spa',
-        // icon: singlespa_svg,
-        // link: 'https://git-scm.com/'
+        link: 'https://single-spa.js.org/'
     },
 ]
 

@@ -10,7 +10,7 @@ export default function App() {
   const navItems: NavItem[] = [
     { name: 'About Me', path: 'aboutMe' },
     { name: 'Education', path: 'education' },
-    { name: 'Portfolio', path: 'portfolio' },
+    { name: 'Skills', path: 'portfolio' },
     { name: 'Resume', path: resume },
     { name: 'Contact', path: 'contact' },
   ];
@@ -78,10 +78,21 @@ export default function App() {
     const toolList = tools.map((tool) => {
       return (
         <li key={tool.name}>
-          <a href={tool.link} target="_blank">
-            {tool.name}
-          </a>
-          <img className="skill_logo" src={tool.icon}></img>
+          <div className="skill-badge">
+            <a href={tool.link} target="_blank">
+              {tool.name}
+            </a>
+            {tool.name === 'single-spa' ? (
+              <img
+                className="skill_logo"
+                src={
+                  'https://single-spa.js.org/img/single-spa-mark-magenta.svg'
+                }
+              ></img>
+            ) : (
+              <img className="skill_logo" src={tool.icon}></img>
+            )}
+          </div>
         </li>
       );
     });
@@ -142,8 +153,8 @@ export default function App() {
           {renderEducation()}
         </div>
       </div>
-      {/* portfolio section */}
-      <div id="portfolio" className="portfolio-section">
+      {/* skills section */}
+      <div id="skills" className="skills-section">
         <div className="container">
           <h3 className="text-left"> Skills </h3>
           <hr></hr>

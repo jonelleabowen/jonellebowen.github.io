@@ -66,7 +66,7 @@
   padding: 20px 30px;
 }
 
-.portfolio-container {
+.skills-container {
   background-color: #d190f4;
   color: white;
 }
@@ -79,13 +79,9 @@
   background: transparent !important;
 }
 
-.portfolio-section {
+.skills-section {
   background-color: #948fffed;
   color: white;
-
-  a {
-    color: white;
-  }
 }
 
 .education-container {
@@ -107,6 +103,25 @@
 
 .skill_logo {
   width: 38px;
+}
+
+.skill-badge {
+  border-radius: 22px;
+  background-color: white;
+  color: black;
+  width: fit-content;
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+  border: 1px solid black;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+li {
+  list-style-type: none;
+  list-style-type: none;
+  padding-bottom: 4px;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
