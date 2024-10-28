@@ -4,6 +4,11 @@
   display: block;
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .topnav {
   display: flex;
 
@@ -50,6 +55,16 @@
 .ja-flag-container {
   display: flex;
   height: inherit;
+}
+
+.socials-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-right: 24px;
+}
+.social-logo {
+  width: 20px;
 }
 
 @media screen and (max-width: 500px) {

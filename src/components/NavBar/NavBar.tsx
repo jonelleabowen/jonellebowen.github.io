@@ -1,6 +1,9 @@
 import { NavItem } from './NavBar.interface';
 import { useRef, useState } from 'react';
 import { jaFlagColors } from '../../constants';
+import linkedin_svg from '../../assets/linkedin.svg';
+import github_svg from '../../assets/github.svg';
+
 import './NavBar.scss';
 
 interface NavBarProps {
@@ -54,22 +57,40 @@ function NavBar(props: NavBarProps) {
   };
 
   return (
-    <nav style={{ display: 'flex' }}>
-      <div className="ja-flag-container">
-        {jaFlagColors.map((color) => {
-          return (
-            <div
-              style={{ backgroundColor: color, height: '100%', width: '10px' }}
-            ></div>
-          );
-        })}
+    <nav className="navbar-container">
+      <div style={{ display: 'flex' }}>
+        <div className="ja-flag-container">
+          {jaFlagColors.map((color) => {
+            return (
+              <div
+                style={{
+                  backgroundColor: color,
+                  height: '100%',
+                  width: '10px',
+                }}
+              ></div>
+            );
+          })}
+        </div>
+        <ul className={`topnav ${navResonsive}`} ref={navRef}>
+          {renderNavItems()}
+          <button
+            className="nav-collapse-button"
+            onClick={onCollapseMenuClicked}
+          >
+            <i className="fa fa-bars"></i>
+          </button>
+        </ul>
       </div>
-      <ul className={`topnav ${navResonsive}`} id="myTopnav" ref={navRef}>
-        {renderNavItems()}
-        <button className="nav-collapse-button" onClick={onCollapseMenuClicked}>
-          <i className="fa fa-bars"></i>
-        </button>
-      </ul>
+
+      <div className="socials-container">
+        <a href="www.linkedin.com/in/jonelle-bowen" target="_blank">
+          <img src={linkedin_svg} className="social-logo"></img>
+        </a>
+        <a href="https://github.com/jonelleabowen" target="_blank">
+          <img src={github_svg} className="social-logo"></img>
+        </a>
+      </div>
     </nav>
   );
 }
