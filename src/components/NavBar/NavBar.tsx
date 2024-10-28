@@ -84,7 +84,7 @@ function NavBar(props: NavBarProps) {
       </div>
 
       <div className="socials-container">
-        <a href="www.linkedin.com/in/jonelle-bowen" target="_blank">
+        <a href="https://www.linkedin.com/in/jonelle-bowen/" target="_blank">
           <img src={linkedin_svg} className="social-logo"></img>
         </a>
         <a href="https://github.com/jonelleabowen" target="_blank">
