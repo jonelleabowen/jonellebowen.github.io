@@ -29,7 +29,7 @@ export default function App() {
         <p>
           There, I studied Java and Object-oriented programming. After earning
           my CS degree, I moved to
-          <span>New York</span> to begin my career in software engineering,
+          <span> New York</span> to begin my career in software engineering,
           where I was quickly thrust into the world of front-end development.
           This space gave me the opportunity to combine my technical skills with
           my creative side. I now have the privilege of working on a User
