@@ -10,7 +10,7 @@ export default function App() {
   const navItems: NavItem[] = [
     { name: 'About Me', path: 'aboutMe' },
     { name: 'Education', path: 'education' },
-    { name: 'Skills', path: 'portfolio' },
+    { name: 'Skills', path: 'skills' },
     { name: 'Resume', path: resume },
     { name: 'Contact', path: 'contact' },
   ];
@@ -126,19 +126,16 @@ export default function App() {
       </div>
       {/* about me section */}
       <div id="aboutMe" className="container">
-        {/* <h1> About Me </h1> */}
         <div className="row">
           <div className="col-sm-8">{renderIntro()}</div>
           <div className="col-sm-4">
-            <a href="#demo2" data-toggle="collapse">
-              <img
-                src={jo_img}
-                className="headshot"
-                alt="Jonelle Bowen"
-                width="255"
-                height="255"
-              ></img>
-            </a>
+            <img
+              src={jo_img}
+              className="headshot"
+              alt="Jonelle Bowen"
+              width="255"
+              height="255"
+            ></img>
           </div>
         </div>
       </div>

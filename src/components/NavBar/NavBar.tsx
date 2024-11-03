@@ -19,7 +19,6 @@ function NavBar(props: NavBarProps) {
   const [navResonsive, setNavResonsive] = useState('');
 
   function handleNavItemClicked(event) {
-    const href = event.target.href;
     const url = new URL(event.target.href);
     const sectionId = url.pathname.split('/')[1];
     onNavItemClicked(event, sectionId);
@@ -63,6 +62,7 @@ function NavBar(props: NavBarProps) {
           {jaFlagColors.map((color) => {
             return (
               <div
+                key={color}
                 style={{
                   backgroundColor: color,
                   height: '100%',
