@@ -119,8 +119,16 @@
 
 li {
   list-style-type: none;
-  list-style-type: none;
   padding-bottom: 4px;
+
+  // :hover {
+  //   // border-bottom: 4px solid #0000ff61;
+  // }
+
+  a:hover {
+    text-decoration: none;
+    // border-bottom: 4px solid #0000ff61;
+  }
 }
 
 /* Turn off parallax scrolling for tablets and phones */

@@ -21,8 +21,8 @@ export default function App() {
         <p>
           Hi! <br />
           I'm Jonelle Bowen, a software engineer with a passion for front-end
-          development. My first introduction to programming happened while I was
-          in high school back in <span>Kingston, Jamaica</span>. With this prior
+          development. I was first introduced to programming while in high
+          school back in <span>Kingston, Jamaica</span>. With this prior
           exposure, I was confident enough to study Computer Science for my
           undergrad when I moved to Maryland, USA for university.
         </p>
